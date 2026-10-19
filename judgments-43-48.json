@@ -1,0 +1,80 @@
+[
+  {
+    "id": "43",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Keep",
+    "reason": "Matches collection to the actual analytics purpose and makes deletion verifiable; several policy defaults remain proposals.",
+    "evidence": "Drops reset-token URLs and unnecessary identifiers; bounded contributions, deletion propagation and restore tombstones."
+  },
+  {
+    "id": "44",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Specifies real revocation semantics and recognizes that cookies alone do not solve XSS or CSRF.",
+    "evidence": "Server-managed sessions; authoritative revocation; legacy JWT rejection; CSRF and XSS controls."
+  },
+  {
+    "id": "45",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Makes release safety depend on tested artifacts and schema compatibility rather than an approval checkbox.",
+    "evidence": "Tests before production; same immutable image; expand-contract; delayed destructive migration."
+  },
+  {
+    "id": "46",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Treats a platform as a product and targets the actual customer bottleneck.",
+    "evidence": "Database-access pilot rather than mandatory portal; voluntary adoption, latency and stop criteria."
+  },
+  {
+    "id": "47",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Keep",
+    "reason": "Documents operator decisions and consequences without inventing executable CLI flags; one referenced file is missing.",
+    "evidence": "Tenant/date preflight; preserves original payment keys; explicitly non-executable example and uncertain outcomes."
+  },
+  {
+    "id": "48",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Tests meaning-preserving invariants using an independent oracle instead of matching counts.",
+    "evidence": "Exact money, timezone instants, identity mapping, full reconciliation and snapshot-bound evidence."
+  }
+]

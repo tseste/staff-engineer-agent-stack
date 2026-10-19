@@ -1,0 +1,240 @@
+[
+  {
+    "id": "07",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Drop",
+    "reason": "Passed, but duplicates implementation planning and program management.",
+    "evidence": "One ticket and early streaming-memory spike; no separate charter/RAG ceremony.",
+    "drop_type": "Overlap"
+  },
+  {
+    "id": "08",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Bounds an open-ended request with exclusions and a stopping rule.",
+    "evidence": "Two sequential approvers; immutable submission snapshot; fixed three-week appetite."
+  },
+  {
+    "id": "09",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Keep",
+    "reason": "Chooses enterprise focus while separating qualified pipeline from cash.",
+    "evidence": "Paid-pilot gates; defers consumer expansion and standalone AI."
+  },
+  {
+    "id": "10",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Builds a feasible portfolio from capacity and quality of evidence.",
+    "evidence": "18 engineer-weeks plus two reserved; maintenance and SSO first; search conditional."
+  },
+  {
+    "id": "11",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Records a restrained decision with operational consequences and revisit triggers.",
+    "evidence": "PostgreSQL email queue; explicit duplicate-delivery window; compares Kafka and hosted queue."
+  },
+  {
+    "id": "12",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Uses code evidence over labels and proposes an incremental testable seam.",
+    "evidence": "Challenges README; separates worker import from runtime evidence; payment port before extraction."
+  },
+  {
+    "id": "13",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Protects consumer compatibility and money correctness.",
+    "evidence": "Versioned exact-money representation; no fake precision from floats; conditional sunset."
+  },
+  {
+    "id": "14",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Keep",
+    "reason": "Prioritizes existing tenant leaks and preserves pooled-customer economics.",
+    "evidence": "Hybrid tenancy; unsafe paths disabled; tenant context and cross-tenant negative tests."
+  },
+  {
+    "id": "15",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Drop",
+    "reason": "Passed using a minimal validation seam; broader architecture skill already covers this judgment.",
+    "evidence": "Rejected repositories/ports/CQRS as merge prerequisites.",
+    "drop_type": "Overlap"
+  },
+  {
+    "id": "16",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Drop",
+    "reason": "Correct refusal to split; specialized extraction reference adds little to the default staff toolkit.",
+    "evidence": "Index first, one deployable, operational ownership before extraction.",
+    "drop_type": "Specialist scope"
+  },
+  {
+    "id": "17",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Drop",
+    "reason": "Correctly declined CQRS; useful only when this specialized implementation is warranted.",
+    "evidence": "One database and daily CSV; distinguishes CQRS from event sourcing.",
+    "drop_type": "Specialist scope"
+  },
+  {
+    "id": "18",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Recognizes irreversible business actions and designs honest recovery.",
+    "evidence": "Nonrefundable flight is partial success; refundable action first; reconcile unknown outcomes."
+  },
+  {
+    "id": "19",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Plans a continuous-write migration with old/new compatibility and honest rollback limits.",
+    "evidence": "Bidirectional synchronization, bounded backfill and locks, delayed contraction."
+  },
+  {
+    "id": "20",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Balances urgent containment with breaking-change verification.",
+    "evidence": "Disable exposed upload route; isolate patched parser; preserve containment on rollback."
+  },
+  {
+    "id": "21",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Tests a falsifiable root-cause hypothesis rather than applying a timeout bandage.",
+    "evidence": "Distinguishes request IDs from idempotency keys; traces durable operation identity."
+  },
+  {
+    "id": "22",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Refuses stale or failed verification evidence and gives a concrete path to a valid claim.",
+    "evidence": "Does not claim tested after dependency failure; requires fresh red/green and suite evidence."
+  },
+  {
+    "id": "23",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Pushes back on unsafe review advice with a viable alternative.",
+    "evidence": "Rejects infinite retries; durable repair states, bounded budgets, idempotent payments."
+  },
+  {
+    "id": "24",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Prioritizes monetary correctness over style and gives precise acceptance checks.",
+    "evidence": "Blocks separate transfer commits and negative amounts; distinguishes local and cross-system atomicity."
+  }
+]

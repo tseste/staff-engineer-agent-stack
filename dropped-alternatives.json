@@ -1,0 +1,98 @@
+[
+  {
+    "dropped_id": "07",
+    "replacement_ids": [
+      "05",
+      "06"
+    ],
+    "reason": "The trial was proportionate and technically sound, but duplicated retained planning coverage.",
+    "use_instead": "Use implementation-planning for a team's delivery. Add technical-program-management only when another team's commitment is on the critical path.",
+    "minimum_output": "One plan or ticket with outcome, owners, dependencies, checks and current blockers.",
+    "reconsider": "An organization explicitly needs a project-management method or reporting structure beyond the retained delivery workflow."
+  },
+  {
+    "dropped_id": "15",
+    "replacement_ids": [
+      "12",
+      "02",
+      "04"
+    ],
+    "reason": "The trial rejected unnecessary layering; that decision is already covered by broader architecture guidance.",
+    "use_instead": "Inspect actual coupling with software-architecture-analysis, choose the boundary with software-architecture, and implement the smallest seam using programming-principles.",
+    "minimum_output": "Observed coupling, chosen seam, preserved invariant and focused tests; no obligatory repositories, adapters or events.",
+    "reconsider": "A chosen architecture genuinely needs a specific pattern implementation reference. This was not a verdict that the patterns are invalid."
+  },
+  {
+    "dropped_id": "16",
+    "replacement_ids": [
+      "02",
+      "12",
+      "38",
+      "32"
+    ],
+    "reason": "It correctly declined a service split; specialized extraction guidance added little to the core selection.",
+    "use_instead": "Establish boundaries and measured scaling/release constraints first. Evaluate failure capacity and operational ownership before choosing extraction.",
+    "minimum_output": "Evidence that one capability needs independent scaling, delivery or isolation; owner, cost, data boundary and recovery plan.",
+    "reconsider": "Service extraction is already justified. The original may then be a useful specialist reference; this combination is not a full replacement for its implementation catalog."
+  },
+  {
+    "dropped_id": "17",
+    "replacement_ids": [
+      "29",
+      "30",
+      "02",
+      "04"
+    ],
+    "reason": "It correctly recommended ordinary CRUD and reporting; the scenario did not justify independent read/write models.",
+    "use_instead": "Measure the reporting/query problem, optimize the simple read path, and decide whether distinct consistency and scaling requirements truly warrant separate models.",
+    "minimum_output": "Measured bottleneck, simple option evaluated, required freshness and consistency, model/operational cost.",
+    "reconsider": "Read/write workloads or domain models demonstrably diverge. CQRS and event sourcing remain separate choices; a dedicated CQRS reference may be warranted then."
+  },
+  {
+    "dropped_id": "26",
+    "replacement_ids": [
+      "05",
+      "22"
+    ],
+    "reason": "The plan was usable, but added assumed technology/file details and duplicated retained planning guidance.",
+    "use_instead": "Write a proportionate implementation plan using inspected repository paths and actual interfaces. Define evidence of completion without scripting every keystroke.",
+    "minimum_output": "Goal, affected components, ordered slices, meaningful checks, recovery notes and uncertainty.",
+    "reconsider": "A delegated implementation requires an unusually explicit plan, and its detail is grounded in the actual repository rather than guessed."
+  },
+  {
+    "dropped_id": "27",
+    "replacement_ids": [
+      "01",
+      "08"
+    ],
+    "reason": "The trial honored a trivial-change fast path; it did not establish added value for open-ended discovery.",
+    "use_instead": "Use product-discovery when the problem is uncertain and product-shaping when the problem is clear but scope is broad. Execute fully specified small changes directly.",
+    "minimum_output": "Known outcome, material unknowns, bounded next step and exclusions only where needed.",
+    "reconsider": "Open-ended creative facilitation or visual exploration is the actual task. That use case was not tested; the drop is not evidence that it performs poorly there."
+  },
+  {
+    "dropped_id": "31",
+    "replacement_ids": [
+      "32",
+      "45",
+      "34"
+    ],
+    "reason": "It correctly recommended no-go, but turned a minimum-readiness request into eleven evidence categories.",
+    "use_instead": "Combine a reliability decision, an executable release/recovery path, and a short incident runbook. Add security, privacy, migration or disaster-recovery expertise only for applicable risks.",
+    "minimum_output": "Five questions below: owner, behavioral evidence, user-impact signals, compatible recovery, and bounded exposure.",
+    "reconsider": "A high-risk service or established organizational policy requires a comprehensive readiness review. Simplification never waives an applicable requirement."
+  },
+  {
+    "dropped_id": "49",
+    "replacement_ids": [
+      "24",
+      "41",
+      "04",
+      "25"
+    ],
+    "reason": "It caught swallowed errors and tenant-isolation gaps, but overlapped retained review and security guidance.",
+    "use_instead": "Review failure paths and negative authorization behavior first. Simplify unjustified abstraction, verify dependency APIs/cleanup, and add regression tests for real failure modes.",
+    "minimum_output": "Prioritized defects, evidence, focused fix, negative-path tests and remaining uncertainty.",
+    "reconsider": "Repeated measured defects in generated code escape the retained workflow and a dedicated checklist shows added value."
+  }
+]

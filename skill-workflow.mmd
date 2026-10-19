@@ -1,0 +1,18 @@
+flowchart TD
+    A[Classify the request] --> B{Active user harm?}
+    B -->|Yes| C[Mitigate and verify recovery]
+    C --> D[Investigate and prevent recurrence]
+    B -->|No| E{Small and fully specified?}
+    E -->|Yes| F[Implement the focused change]
+    E -->|No| G[Frame the outcome and scope]
+    G --> H[Inspect evidence and choose a direction]
+    H --> I[Add only relevant specialists]
+    I --> J[Plan and implement a small slice]
+    D --> J
+    F --> K[Review and verify at appropriate depth]
+    J --> K
+    K --> L{Production release in scope?}
+    L -->|Yes| M[Release within authorization and observe]
+    L -->|No| N[Report supported results and gaps]
+    M --> O[Operate and learn]
+    O --> G

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "37",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Keep",
+    "reason": "Distinguishes completed backups from recoverable business service and tests explicit RPO/RTO.",
+    "evidence": "Nightly recovery misses 1h RPO; 7h restore misses 2h RTO; requires clean isolated timed drill."
+  },
+  {
+    "id": "38",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Calculates capacity under failure rather than healthy aggregate and prices headroom.",
+    "evidence": "600 rps after zone loss; 14 pods minimum now, 18 next quarter; recommends 20 with spare-pod allowance."
+  },
+  {
+    "id": "39",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Prioritizes reversible savings while protecting memory and reliability; challenges an unsupported target.",
+    "evidence": "$24k target not guaranteed; 12% average CPU insufficient for cuts; 25% RAM cut implies ~93% utilization."
+  },
+  {
+    "id": "40",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Connects the asynchronous request path and treats telemetry as a data exposure boundary.",
+    "evidence": "Queue context propagation, retry spans, latency boundaries, seeded PII absence checks."
+  },
+  {
+    "id": "41",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Fixes authorization before cosmetic hardening and addresses already exposed bearer links.",
+    "evidence": "Cross-tenant negative tests; existing signed URLs require revocation; no claim new expiry fixes old tokens."
+  },
+  {
+    "id": "42",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Maps each concrete threat to a control and verification rather than prescribing irrelevant infrastructure.",
+    "evidence": "Signatures, freshness, durable deduplication, parameterized SQL; explains VPN limitations."
+  }
+]

@@ -1,0 +1,81 @@
+[
+  {
+    "id": "31",
+    "scores": [
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "decision": "Drop",
+    "reason": "Correct no-go, but the minimum-readiness request became eleven evidence categories with many proposed owners and waiver gates.",
+    "evidence": "Three known blockers expanded into mandatory gaps including cost and unverified categories.",
+    "drop_type": "Trial weakness: disproportionate process"
+  },
+  {
+    "id": "32",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Keep",
+    "reason": "Connects launch risk to error budget and user-impact alerts, with explicit SLI assumptions.",
+    "evidence": "43.2 minutes allowed; 50 consumed; defers risky release; replaces noisy CPU pages."
+  },
+  {
+    "id": "33",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Defines reliability around completed user outcomes and handles sparse events.",
+    "evidence": "Stuck jobs remain in deadline cohort; 56-miss 28-day budget; low-volume overdue alerts."
+  },
+  {
+    "id": "34",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Prioritizes mitigation and proves recovery rather than declaring it from a changed flag.",
+    "evidence": "Disable discount flag early; timed rollback branch; cohort/error/payment verification."
+  },
+  {
+    "id": "35",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Separates known contributing conditions from unproven root cause and assigns verifiable prevention.",
+    "evidence": "No blame on junior engineer; protocol gates, staging parity and rehearsed rollback."
+  },
+  {
+    "id": "36",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Transfers actionable ownership and preserves uncertainty during a live incident.",
+    "evidence": "18:30 UTC restart; owner Alex; pending fix; queue headroom is not time to breach."
+  }
+]

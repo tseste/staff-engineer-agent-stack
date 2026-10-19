@@ -1,0 +1,502 @@
+[
+  {
+    "id": "01",
+    "name": "product-discovery",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/product-discovery/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/product-discovery/SKILL.md",
+    "scenario": "Sales asks for an AI dashboard because three prospects mentioned AI. Existing activation is 28%, onboarding has 7 steps, and support receives 40 setup tickets/week. You have two engineers for four weeks. Recommend what to do next and what evidence would change your mind.",
+    "criteria": "Separates requested solution from customer problem; proposes bounded discovery or experiment; does not claim the dashboard fixes activation."
+  },
+  {
+    "id": "02",
+    "name": "software-architecture",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/software-architecture/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/software-architecture/SKILL.md",
+    "scenario": "An 8-person team operates a Django monolith at 150 requests/sec, p95 220ms, and 99.95% availability. The CTO proposes 12 microservices to prepare for 10x growth next year. Deployments currently fail because tests share mutable fixtures. Recommend an architecture direction.",
+    "criteria": "Rejects unjustified split; addresses actual deployment constraint; states measurable reconsideration triggers."
+  },
+  {
+    "id": "03",
+    "name": "technology-radar",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/technology-radar/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/technology-radar/SKILL.md",
+    "scenario": "Two teams want to replace PostgreSQL with a new distributed database. There is no measured scaling problem; one team needs regional reads next quarter. The database vendor offers a free year. Decide adopt, trial, assess, or hold, with a practical experiment and exit criteria.",
+    "criteria": "Accounts for migration and operational costs; targets regional need; avoids free-license bias and blanket governance."
+  },
+  {
+    "id": "04",
+    "name": "programming-principles",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/programming-principles/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/programming-principles/SKILL.md",
+    "scenario": "Review this proposed retry behavior for payments: after any timeout, create a new payment request ID and retry up to five times. The provider may have committed before the timeout. Explain the failure and recommend a minimal robust design.",
+    "criteria": "Identifies ambiguous outcome and duplicate charge; stable idempotency key; reconciliation and bounded retry."
+  },
+  {
+    "id": "05",
+    "name": "implementation-planning",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/implementation-planning/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/implementation-planning/SKILL.md",
+    "scenario": "In six weeks, three engineers must move 400 customers from legacy auth to OIDC. Two mobile versions must remain supported for 90 days. There is no identity reconciliation tool. Produce a concise delivery plan with first slice, dependencies, validation, and rollback.",
+    "criteria": "Includes identity mapping and compatibility; sequences thin slice; realistic release gates and rollback limitations."
+  },
+  {
+    "id": "06",
+    "name": "technical-program-management",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/technical-program-management/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/technical-program-management/SKILL.md",
+    "scenario": "A mandatory billing API change is due in 8 weeks across four teams. Team A owns the contract but has no allocated engineer; B says done while its integration test is failing; C has a release freeze in week 6; D has not estimated. Give the program decision and this week's actions.",
+    "criteria": "Names critical path/owners; challenges false green; handles freeze and allocation rather than adding meetings only."
+  },
+  {
+    "id": "07",
+    "name": "technical-project-management",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/technical-project-management/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/technical-project-management/SKILL.md",
+    "scenario": "A team of three is adding a CSV export in five days. Scope is already agreed, a query exists, and the only uncertainty is streaming 1M rows without exhausting memory. The manager asks for a full project charter and daily RAG reports. Recommend a proportionate execution approach.",
+    "criteria": "Focuses memory spike and small milestones; avoids heavyweight charter; sets demonstrable completion."
+  },
+  {
+    "id": "08",
+    "name": "product-shaping",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/product-shaping/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/product-shaping/SKILL.md",
+    "scenario": "A customer wants configurable approval workflows in 3 weeks. Existing product supports one approver. Requests include arbitrary graphs, conditional rules, audit history, and mobile editing. Two engineers are available. Shape a useful release and draw explicit exclusions.",
+    "criteria": "Delivers bounded useful slice; excludes arbitrary workflow engine; handles audit/permissions and appetite."
+  },
+  {
+    "id": "09",
+    "name": "product-strategy",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/product-strategy/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/product-strategy/SKILL.md",
+    "scenario": "A B2B tool has 12-month runway. Enterprise requests account for 65% of qualified revenue but only 10% of signups; self-serve has 70% first-month churn. Leadership wants simultaneous consumer expansion, enterprise SSO, and AI features. Recommend a strategic focus with assumptions.",
+    "criteria": "Makes an explicit choice using economics; avoids treating qualified revenue as booked revenue; identifies validation and opportunity cost."
+  },
+  {
+    "id": "10",
+    "name": "product-roadmapping-and-portfolio",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/product-roadmapping-and-portfolio/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/product-roadmapping-and-portfolio/SKILL.md",
+    "scenario": "Capacity is 20 engineer-weeks. Options: SSO (8, unblocks two signed conditional contracts totaling $200k ARR), redesign (12, unvalidated), database maintenance (4, support ends in 2 months), search improvement (6, estimated saves 20 support hours/week). Choose a portfolio and say what gets deferred.",
+    "criteria": "Respects capacity; handles maintenance deadline; values evidence quality and explicit tradeoffs."
+  },
+  {
+    "id": "11",
+    "name": "architecture-decision-records",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/documentation-generation/skills/architecture-decision-records/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/documentation-generation/skills/architecture-decision-records/SKILL.md",
+    "scenario": "Write a short ADR: a three-engineer service needs asynchronous emails at 20 jobs/min. Options are an existing PostgreSQL job table, hosted queue at $150/month, or self-managed Kafka. Existing PostgreSQL has spare capacity. Choose and include consequences and revisit triggers.",
+    "criteria": "Clear scoped choice; alternatives and real consequences; avoids Kafka prestige and irreversible decision language."
+  },
+  {
+    "id": "12",
+    "name": "software-architecture-analysis",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/software-architecture-analysis/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/software-architecture-analysis/SKILL.md",
+    "scenario": "Repository facts: api/routes.py calls services/orders.py; that module both writes SQL and calls Stripe; workers/reconcile.py imports the same module; README claims clean hexagonal architecture. There are no interfaces around payment calls. Describe the actual architecture and the first useful improvement.",
+    "criteria": "Uses code evidence over README; identifies shared coupling; incremental boundary recommendation without invented files."
+  },
+  {
+    "id": "13",
+    "name": "api-design-and-evolution",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/api-design-and-evolution/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/api-design-and-evolution/SKILL.md",
+    "scenario": "Public API returns price as a floating-point JSON number. Clients in three languages exist and mobile apps can lag 90 days. Finance requires exact minor-unit amounts and currency. Design a compatible evolution, including deprecation and verification.",
+    "criteria": "Additive or versioned migration; currency/minor unit semantics; old-client support and real consumer verification."
+  },
+  {
+    "id": "14",
+    "name": "multi-tenant-saas-architecture",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/multi-tenant-saas-architecture/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/multi-tenant-saas-architecture/SKILL.md",
+    "scenario": "A SaaS uses shared PostgreSQL tables with tenant_id. One enterprise customer demands isolation; 95 small customers cannot tolerate a price increase. Background exports and support tooling currently omit tenant filtering in some paths. Recommend architecture and immediate priorities.",
+    "criteria": "Prioritizes tenant leaks; covers jobs/support/caches; weighs tiered isolation cost rather than universal silo."
+  },
+  {
+    "id": "15",
+    "name": "architecture-patterns",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/backend-development/skills/architecture-patterns/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/backend-development/skills/architecture-patterns/SKILL.md",
+    "scenario": "A 2,000-line internal CRUD app has one maintainer and one database. A reviewer requires repositories, ports, adapters, domain events, and CQRS before a small validation fix can merge. Decide what architecture work is warranted.",
+    "criteria": "Rejects disproportionate layering; fixes validation with focused tests; names conditions that would justify boundaries."
+  },
+  {
+    "id": "16",
+    "name": "microservices-patterns",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/backend-development/skills/microservices-patterns/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/backend-development/skills/microservices-patterns/SKILL.md",
+    "scenario": "A six-person startup has three modules in one service and no on-call rotation. CEO wants a microservice per module next month for scalability. The measured bottleneck is one missing database index. Recommend the next architecture step and ownership implications.",
+    "criteria": "Fixes measured bottleneck; resists unjustified microservices; recognizes distributed operations cost."
+  },
+  {
+    "id": "17",
+    "name": "cqrs-implementation",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/backend-development/skills/cqrs-implementation/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/backend-development/skills/cqrs-implementation/SKILL.md",
+    "scenario": "An admin CRUD system handles 30 writes/hour and 3 reads/sec. The team proposes event sourcing and separate read models to simplify reporting. Reports need daily CSV and the database is lightly loaded. Decide whether CQRS is appropriate and outline the smallest solution.",
+    "criteria": "Declines unnecessary CQRS/event sourcing; distinguishes the two; simple report path and revisit trigger."
+  },
+  {
+    "id": "18",
+    "name": "saga-orchestration",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/backend-development/skills/saga-orchestration/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/backend-development/skills/saga-orchestration/SKILL.md",
+    "scenario": "A travel booking reserves a nonrefundable flight and then a refundable hotel. Hotel reservation fails after flight confirmation. A proposed saga says 'rollback the flight transaction.' Recommend workflow and handling of partial success.",
+    "criteria": "Recognizes compensation cannot undo nonrefundable action; reorders/holds if possible; manual reconciliation and user handling."
+  },
+  {
+    "id": "19",
+    "name": "database-migration",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/framework-migration/skills/database-migration/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/framework-migration/skills/database-migration/SKILL.md",
+    "scenario": "A 300GB PostgreSQL orders table serves writes continuously. Rename customer_id to account_id without downtime; old and new app versions overlap for 24 hours. Current migration uses DROP COLUMN then ADD COLUMN in one deployment. Propose a rollout and rollback plan.",
+    "criteria": "Expand-contract compatibility; backfill/locking awareness; dual-version support; no destructive rollback illusion."
+  },
+  {
+    "id": "20",
+    "name": "dependency-upgrade",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/framework-migration/skills/dependency-upgrade/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/framework-migration/skills/dependency-upgrade/SKILL.md",
+    "scenario": "A critical parser CVE is fixed only in v5, but the app uses v3 and v5 changes error types. Thirty direct call sites exist. Exploitation needs untrusted XML, used by one upload endpoint. Security wants remediation today. Recommend bounded remediation and follow-up verification.",
+    "criteria": "Addresses exposed surface quickly; verifies mitigations; tests error behavior/upgrade; no blind major version rollout."
+  },
+  {
+    "id": "21",
+    "name": "systematic-debugging",
+    "repository": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "skill_path": "/workspace/staff-skills/sources/superpowers/skills/systematic-debugging/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/systematic-debugging/SKILL.md",
+    "scenario": "A worker started duplicating invoices after a deploy. Logs: request id A times out at provider after 5s; local transaction rolls back; queue retries and sends id B; provider later shows both charges. An engineer proposes increasing timeout to 30s. Diagnose and propose the next specific investigation and fix.",
+    "criteria": "Root cause ambiguous commit/new ID; timeout increase insufficient; stable idempotency and reproduction."
+  },
+  {
+    "id": "22",
+    "name": "verification-before-completion",
+    "repository": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "skill_path": "/workspace/staff-skills/sources/superpowers/skills/verification-before-completion/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/verification-before-completion/SKILL.md",
+    "scenario": "You changed a retry loop. Evidence: unit suite passed yesterday before the edit; today's test command exited 2 with 'dependency missing'; code review says 'looks fine'. Release manager asks: 'Can I say this is fixed and tested?' Write your response and exact next validation steps. No executable repo is supplied.",
+    "criteria": "Refuses unearned tested claim; distinguishes review from execution; concrete current validation without invented results."
+  },
+  {
+    "id": "23",
+    "name": "receiving-code-review",
+    "repository": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "skill_path": "/workspace/staff-skills/sources/superpowers/skills/receiving-code-review/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/receiving-code-review/SKILL.md",
+    "scenario": "Reviewer insists that retries should catch every exception and retry indefinitely because 'we cannot lose events'. The worker calls a payment API and handles invalid credentials and invalid input too. Respond to the review with a technically justified decision.",
+    "criteria": "Respectful pushback; distinguishes transient/permanent failures; bounded backoff, idempotency and dead letter handling."
+  },
+  {
+    "id": "24",
+    "name": "code-review-excellence",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+    "scenario": "Review this pseudocode PR: transfer(from,to,amount): debit(from,amount); credit(to,amount). Functions each commit separately; negative amounts are accepted; PR also renames a variable from x to account. Provide prioritized review comments and merge recommendation.",
+    "criteria": "Finds atomicity and validation critical issues; concurrency/idempotency if relevant; avoids style distracting from correctness."
+  },
+  {
+    "id": "25",
+    "name": "test-driven-development",
+    "repository": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "skill_path": "/workspace/staff-skills/sources/superpowers/skills/test-driven-development/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/test-driven-development/SKILL.md",
+    "scenario": "A cache function returns expired entries at exactly expires_at because it uses now <= expires_at. User asks to fix it. No code repository is provided. Give the smallest patch as pseudocode and a meaningful red/green test sequence, including boundary and no wall-clock sleeps.",
+    "criteria": "Boundary now < expires_at; deterministic injected clock; test catches original bug; does not invent execution."
+  },
+  {
+    "id": "26",
+    "name": "writing-plans",
+    "repository": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "skill_path": "/workspace/staff-skills/sources/superpowers/skills/writing-plans/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/writing-plans/SKILL.md",
+    "scenario": "Add a nullable display_name to an existing users table and show it with fallback to username. One service and one UI component; no public API changes; estimated half a day. Give an appropriately sized implementation plan and completion evidence.",
+    "criteria": "Small ordered migration/backend/UI/test plan; no unnecessary decomposition or approval pauses; fallback and rollback addressed."
+  },
+  {
+    "id": "27",
+    "name": "brainstorming",
+    "repository": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "skill_path": "/workspace/staff-skills/sources/superpowers/skills/brainstorming/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/brainstorming/SKILL.md",
+    "scenario": "User has approved exact requirements for a one-line UI change: change 'Submit' to 'Save changes'; no behavior change. They explicitly say 'make the edit without another design discussion'. No repository is supplied, so explain the immediate action and minimal verification.",
+    "criteria": "Honors explicit user scope; no design workshop or permission gate; acknowledges no executable repository."
+  },
+  {
+    "id": "28",
+    "name": "dispatching-parallel-agents",
+    "repository": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "skill_path": "/workspace/staff-skills/sources/superpowers/skills/dispatching-parallel-agents/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/dispatching-parallel-agents/SKILL.md",
+    "scenario": "Three failing tests: auth refresh and billing API both rely on the same token fixture; a third checks an unrelated CSS layout. You can use subagents but are only asked for a delegation plan, not to run them. Propose task boundaries, ownership, and integration checks.",
+    "criteria": "Groups dependent auth/billing; independent CSS in parallel; ownership and integration verification."
+  },
+  {
+    "id": "29",
+    "name": "performance-optimization",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/performance-optimization/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/performance-optimization/SKILL.md",
+    "scenario": "API p95 is 2.4s. A profile attributes 1.9s to 40 sequential database queries; CPU is 15%; serialization is 20ms. Team wants a Rust rewrite and Redis cache. Choose the next change and benchmark design.",
+    "criteria": "Targets query fanout; representative benchmark/p95/correctness; rejects unsupported rewrite and cache."
+  },
+  {
+    "id": "30",
+    "name": "sql-optimization-patterns",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md",
+    "scenario": "Query: SELECT * FROM orders WHERE tenant_id = ? AND status = 'open' ORDER BY created_at DESC LIMIT 50. Table has 80M rows and only PK index; writes are high. Recommend investigation and an index strategy with deployment safeguards.",
+    "criteria": "EXPLAIN and selectivity; useful composite/partial index; write/storage tradeoff and safe concurrent build."
+  },
+  {
+    "id": "31",
+    "name": "production-readiness",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/production-readiness/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/production-readiness/SKILL.md",
+    "scenario": "New checkout service has passing unit tests but no rollback procedure, no on-call owner, and a dashboard that only shows CPU. Launch is tomorrow; 5% rollout is possible. Make a go/no-go recommendation with the minimum readiness work.",
+    "criteria": "Identifies critical ownership/rollback/customer metrics; conditional launch not endless checklist; explicit gates."
+  },
+  {
+    "id": "32",
+    "name": "site-reliability-engineering",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/site-reliability-engineering/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/site-reliability-engineering/SKILL.md",
+    "scenario": "An API has 99.9% monthly SLO. It suffered 50 minutes of outage in a 30-day month and a risky feature launch is scheduled tomorrow. Most alerts are CPU warnings, even when users are unaffected. Recommend launch and reliability priorities.",
+    "criteria": "Computes 43.2 minute budget and exhaustion; prioritizes user impact and risk; calibrated release exception path."
+  },
+  {
+    "id": "33",
+    "name": "slo-implementation",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/observability-monitoring/skills/slo-implementation/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/observability-monitoring/skills/slo-implementation/SKILL.md",
+    "scenario": "Design an SLO for an async export API. POST returns 202 in 40ms even when workers are stuck for hours. Users expect 99% of exports within 10 minutes. Volume is only 200 exports/day. Specify SLI, objective, and useful alerts.",
+    "criteria": "Measures completion not accept latency; includes stuck requests in denominator; low-volume/window caution."
+  },
+  {
+    "id": "34",
+    "name": "incident-runbook-templates",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/incident-response/skills/incident-runbook-templates/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/incident-response/skills/incident-runbook-templates/SKILL.md",
+    "scenario": "Checkout errors jump from 0.2% to 18% directly after a release. Database is healthy; a feature flag can disable the new discount path. Rollback takes 20 minutes. Draft the first 15 minutes of a runbook, with decision points and recovery proof.",
+    "criteria": "Rapid flag mitigation; roles/escalation; metrics recovery verification; no endless investigation before mitigation."
+  },
+  {
+    "id": "35",
+    "name": "postmortem-writing",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/incident-response/skills/postmortem-writing/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/incident-response/skills/postmortem-writing/SKILL.md",
+    "scenario": "A deploy caused 40 minutes of failed exports. A junior engineer merged it after green CI; CI never tested the queue protocol; staging used an older worker; rollback instructions were stale. Write a brief postmortem summary and three prioritized actions.",
+    "criteria": "Systemic blameless analysis; test/staging/rollback gaps; owners and verifiable prevention without invented timeline."
+  },
+  {
+    "id": "36",
+    "name": "on-call-handoff-patterns",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/incident-response/skills/on-call-handoff-patterns/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/incident-response/skills/on-call-handoff-patterns/SKILL.md",
+    "scenario": "At shift change a memory leak is mitigated by worker restarts every 2 hours. Queue age is 8 minutes (SLO 10); next restart is due 18:30 UTC; incident owner is Alex; fix PR has not deployed; support awaits update. Write the handoff.",
+    "criteria": "Explicit next action/time/owner; temporary mitigation and risk; escalation threshold and customer status."
+  },
+  {
+    "id": "37",
+    "name": "resilience-and-recovery",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/resilience-and-recovery/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/resilience-and-recovery/SKILL.md",
+    "scenario": "Backups run nightly and succeed. A ransomware drill requires RPO <=1h and RTO <=2h. The last restore test was 10 months ago and took 7h. Leadership believes 'backups are green so we're covered'. Recommend a recovery plan and immediate statement of readiness.",
+    "criteria": "States RPO/RTO unmet; immutable/isolated copies and recovery tests; measured restore and dependency plan."
+  },
+  {
+    "id": "38",
+    "name": "capacity-and-cost-engineering",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/capacity-and-cost-engineering/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/capacity-and-cost-engineering/SKILL.md",
+    "scenario": "A service peaks at 800 requests/sec. Load tests sustain 120 requests/sec per pod within latency SLO; 10 pods run in two zones equally. One zone can fail. Growth forecast is 30% next quarter. Calculate present and future safe capacity and recommend action.",
+    "criteria": "Recognizes 600 rps surviving-zone capacity; current needs 7 per zone at tested ceiling; growth 1040 needs 9 per zone plus headroom; distinguishes ceiling and target."
+  },
+  {
+    "id": "39",
+    "name": "cost-optimization",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/cloud-infrastructure/skills/cost-optimization/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/cloud-infrastructure/skills/cost-optimization/SKILL.md",
+    "scenario": "Monthly spend is $60k: compute $30k at 12% average CPU, database $20k at 70% peak memory, logs $10k with 365-day retention. Finance demands 40% savings in two weeks. Recommend prioritized actions and risk controls without invented savings certainty.",
+    "criteria": "Measurement/rightsizing before commitment; memory constraint; retention requirements; quantified target but no fake guarantee."
+  },
+  {
+    "id": "40",
+    "name": "distributed-tracing",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/observability-monitoring/skills/distributed-tracing/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/observability-monitoring/skills/distributed-tracing/SKILL.md",
+    "scenario": "A frontend timeout spans gateway, checkout, queue, worker, and payment provider. HTTP traces stop at the queue, and logs contain emails and card fragments. Design the minimum useful tracing change and verification.",
+    "criteria": "Context propagation across async boundary; span links/latency; sampling/correlation; redact sensitive attributes."
+  },
+  {
+    "id": "41",
+    "name": "secure-software-engineering",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/secure-software-engineering/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/secure-software-engineering/SKILL.md",
+    "scenario": "A CSV export endpoint takes account_id from the client, queries that account, and returns a signed download URL valid for 7 days. Authentication exists but no authorization check; URLs appear in logs. Prioritize fixes and regression tests.",
+    "criteria": "Object authorization first; tenant isolation; scoped short-lived URLs and log hygiene; cross-tenant negative test."
+  },
+  {
+    "id": "42",
+    "name": "threat-mitigation-mapping",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md",
+    "scenario": "For a public webhook receiver, threats are forged events, replayed valid events, duplicate delivery, and payload-driven SQL injection. Team proposes putting it behind a VPN. Map practical mitigations and identify what a VPN would fail to solve.",
+    "criteria": "Signature/body verification; replay/freshness/idempotency; parameterized queries; recognizes public provider accessibility."
+  },
+  {
+    "id": "43",
+    "name": "privacy-engineering",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/privacy-engineering/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/privacy-engineering/SKILL.md",
+    "scenario": "Analytics currently collects email, IP, full URL including reset tokens, and user ID. Product only needs weekly feature usage by plan tier. Requests include delete-user support and 2-year event retention. Recommend minimal collection and deletion design.",
+    "criteria": "Data minimization and token removal; pseudonymization not anonymity; retention basis and propagated deletion."
+  },
+  {
+    "id": "44",
+    "name": "auth-implementation-patterns",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/developer-essentials/skills/auth-implementation-patterns/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/developer-essentials/skills/auth-implementation-patterns/SKILL.md",
+    "scenario": "A browser SPA stores 30-day JWTs in localStorage. An admin can revoke a user, but APIs only verify JWT signature and expiry. App has an XSS history. Recommend a practical session design and revocation semantics.",
+    "criteria": "Recognizes XSS and revocation gap; bounded/access session strategy; cookies require CSRF controls; no JWT magic."
+  },
+  {
+    "id": "45",
+    "name": "deployment-pipeline-design",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/cicd-automation/skills/deployment-pipeline-design/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/cicd-automation/skills/deployment-pipeline-design/SKILL.md",
+    "scenario": "Pipeline deploys to production on main push, then runs integration tests against production. Migration drops a column before old pods stop. Team wants only a manual approval step as a fix. Redesign the minimum safe pipeline.",
+    "criteria": "Predeploy verification; backward compatible migration; progressive release and recovery; approval not substitute for checks."
+  },
+  {
+    "id": "46",
+    "name": "platform-engineering",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/platform-engineering/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/platform-engineering/SKILL.md",
+    "scenario": "Platform team wants to mandate a new internal deployment portal for 12 teams. Only 2 teams were interviewed; 8 already deploy in under 10 minutes. Largest complaint is waiting 3 days for database access. Recommend platform investment and adoption plan.",
+    "criteria": "Starts actual bottleneck/users; avoids mandated unused platform; smallest paved road and adoption/outcome metrics."
+  },
+  {
+    "id": "47",
+    "name": "technical-documentation",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/technical-documentation/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/technical-documentation/SKILL.md",
+    "scenario": "Write the outline and sample critical section of a runbook for a job replay command. Replays can duplicate payments unless an idempotency key is preserved; operator must select tenant and date range. Existing docs only list CLI flags.",
+    "criteria": "Task-oriented prerequisites and safe example; consequences and verification; no undocumented flags asserted as real."
+  },
+  {
+    "id": "48",
+    "name": "verification-methodology",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/verification-methodology/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/verification-methodology/SKILL.md",
+    "scenario": "A migration report says 'validated' because row counts match. It converts dollars to cents using floating-point round(), changes timezone, and rekeys users; no samples or invariants were checked. Design the smallest credible verification strategy.",
+    "criteria": "Beyond counts: monetary/identity/time invariants, representative edge cases; independent comparison and clear evidence limits."
+  },
+  {
+    "id": "49",
+    "name": "ai-debt-detector",
+    "repository": "wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "skill_path": "/workspace/staff-skills/sources/wshobson/plugins/skill-forge-essentials/skills/ai-debt-detector/SKILL.md",
+    "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/skill-forge-essentials/skills/ai-debt-detector/SKILL.md",
+    "scenario": "Review a hypothetical AI-authored change: 600-line generic workflow engine for two fixed states; three new dependencies; broad catch Exception returning success; duplicated tenant filters; no tests for denied access. Identify the top risks and propose a focused cleanup sequence.",
+    "criteria": "Prioritizes swallowed failure and isolation tests; recognizes unnecessary abstraction/dependency cost; no irrelevant sweeping rewrite."
+  },
+  {
+    "id": "50",
+    "name": "org-design",
+    "repository": "magnus919/agent-skills",
+    "commit": "06ca706ecaa80f6afb31ae28eb160d39372b7267",
+    "skill_path": "/workspace/staff-skills/sources/magnus/org-design/SKILL.md",
+    "url": "https://github.com/magnus919/agent-skills/blob/06ca706ecaa80f6afb31ae28eb160d39372b7267/org-design/SKILL.md",
+    "scenario": "Three teams own UI, API, and database layers separately. Every customer feature waits on all three; each team meets its velocity target but lead time is 6 weeks. Leadership proposes adding a coordination manager. Recommend an organizational experiment without assuming hiring is the answer.",
+    "criteria": "Identifies handoff/local optimization; bounded cross-functional outcome ownership; measures lead time and guardrails."
+  }
+]

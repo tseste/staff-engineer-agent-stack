@@ -1,0 +1,29 @@
+[
+  {
+    "id": "49",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Drop",
+    "reason": "Passed, but its generic failure-mode and dependency review duplicates code-review-excellence plus secure-software-engineering; no distinct core benefit demonstrated.",
+    "evidence": "Prioritized swallowed errors and tenant-negative tests before simplifying an unnecessary workflow engine.",
+    "drop_type": "Overlap"
+  },
+  {
+    "id": "50",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Tests a change in outcome ownership instead of adding coordination overhead, with explicit capacity tradeoffs and guardrails.",
+    "evidence": "Reversible stream-aligned pilot; measures end-to-end lead time and impact on remaining teams."
+  }
+]

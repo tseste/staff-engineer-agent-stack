@@ -1,0 +1,296 @@
+[
+  {
+    "id": "01",
+    "stage": "Frame",
+    "trigger": "A request names a feature but the user problem or evidence is unclear.",
+    "output": "Problem statement, affected users, evidence gaps, smallest learning experiment.",
+    "handoff": "08 once the problem is sufficiently understood; 09 only for strategic choices."
+  },
+  {
+    "id": "09",
+    "stage": "Frame",
+    "trigger": "Business direction, target market, or investment focus is contested.",
+    "output": "Recommended focus, economic assumptions, opportunity cost, reversal evidence.",
+    "handoff": "10 for competing investments; 08 for a selected opportunity."
+  },
+  {
+    "id": "10",
+    "stage": "Frame",
+    "trigger": "Several worthwhile initiatives exceed available capacity.",
+    "output": "Capacity-feasible portfolio, deferred work, deadlines, benefit confidence.",
+    "handoff": "08 then 05 for funded work."
+  },
+  {
+    "id": "08",
+    "stage": "Frame",
+    "trigger": "A useful outcome is known but the requested solution is too broad.",
+    "output": "Small release, appetite, exclusions, essential constraints, stopping rule.",
+    "handoff": "02 if design choices are consequential; otherwise 05 or direct implementation."
+  },
+  {
+    "id": "12",
+    "stage": "Understand and decide",
+    "trigger": "An existing system's boundaries, ownership, or coupling are uncertain.",
+    "output": "Evidence-backed current-state map with unknowns explicitly marked.",
+    "handoff": "02 for design; 21 for a defect; 29 for performance."
+  },
+  {
+    "id": "02",
+    "stage": "Understand and decide",
+    "trigger": "A consequential structural choice, rewrite, or service split is proposed.",
+    "output": "One recommendation, credible alternatives, tradeoffs, reversible first step, revisit triggers.",
+    "handoff": "11 for durable rationale; selected specialist; 05 for delivery."
+  },
+  {
+    "id": "03",
+    "stage": "Understand and decide",
+    "trigger": "A new technology, vendor, or platform standard is being considered.",
+    "output": "Adopt/trial/assess/hold recommendation, cost and exit analysis, bounded experiment.",
+    "handoff": "02 for system implications; 11 when a durable decision is made."
+  },
+  {
+    "id": "11",
+    "stage": "Understand and decide",
+    "trigger": "A significant choice will constrain future engineers or is costly to reverse.",
+    "output": "Short decision record: context, choice, rejected options, consequences, revisit trigger.",
+    "handoff": "05 and implementation; update the record only when the decision changes."
+  },
+  {
+    "id": "04",
+    "stage": "Design and implement",
+    "trigger": "Correctness, coupling, state ownership, retries, or unnecessary abstractions need judgment.",
+    "output": "Explicit invariants and the smallest implementation that preserves them.",
+    "handoff": "25 for meaningful regression cases; 24 for review."
+  },
+  {
+    "id": "13",
+    "stage": "Design and implement",
+    "trigger": "A public API, event contract, or client-visible representation changes.",
+    "output": "Precise contract, consumer inventory, compatibility strategy, deprecation conditions.",
+    "handoff": "19 if storage changes; 48 for semantic checks; 45 for rollout."
+  },
+  {
+    "id": "14",
+    "stage": "Design and implement",
+    "trigger": "Tenant isolation, shared resources, or enterprise isolation promises change.",
+    "output": "Tenant boundaries, enforcement points, placement economics, cross-tenant invariants.",
+    "handoff": "41/44 for access controls; 19 for data movement; 38 for resource cost."
+  },
+  {
+    "id": "18",
+    "stage": "Design and implement",
+    "trigger": "A workflow spans separately committed systems or irreversible business actions.",
+    "output": "Durable states, idempotency, compensation limits, reconciliation and escalation.",
+    "handoff": "25/48 for failure cases; 34 for operational recovery."
+  },
+  {
+    "id": "19",
+    "stage": "Design and implement",
+    "trigger": "A schema or stored-data change must coexist with live traffic or old versions.",
+    "output": "Expand/backfill/validate/contract sequence, lock budgets, compatibility and recovery limits.",
+    "handoff": "48 before promotion; 45 for coordinated release."
+  },
+  {
+    "id": "20",
+    "stage": "Design and implement",
+    "trigger": "A dependency upgrade changes behavior or mitigates a vulnerability.",
+    "output": "Exposure containment, dependency/compatibility analysis, focused upgrade and recovery plan.",
+    "handoff": "25/24 for changed behavior; 45 after relevant verification."
+  },
+  {
+    "id": "41",
+    "stage": "Design and implement",
+    "trigger": "The change crosses trust boundaries or handles permissions, secrets, or sensitive actions.",
+    "output": "Prioritized threats, server-enforced authorization, negative tests, exposure containment.",
+    "handoff": "42 for explicit control mapping; 44 for session design; 24/48 for verification."
+  },
+  {
+    "id": "42",
+    "stage": "Design and implement",
+    "trigger": "Several identified threats need concrete, testable controls.",
+    "output": "Threat-to-control mapping with residual risk and verification cases.",
+    "handoff": "41 for implementation; 48 for effectiveness evidence."
+  },
+  {
+    "id": "43",
+    "stage": "Design and implement",
+    "trigger": "Personal data collection, telemetry, retention, exports, or deletion changes.",
+    "output": "Purpose-limited data model, retention/deletion lifecycle, deletion verification.",
+    "handoff": "13/19 for contracts/storage; 47 for operator instructions; 48 for evidence."
+  },
+  {
+    "id": "44",
+    "stage": "Design and implement",
+    "trigger": "Login, sessions, account linking, revocation, or permission enforcement changes.",
+    "output": "Authentication/session contract, revocation semantics, authorization and CSRF/XSS checks.",
+    "handoff": "41 for broader exposure review; 25/48 for security regressions."
+  },
+  {
+    "id": "05",
+    "stage": "Deliver",
+    "trigger": "Work has meaningful sequencing, dependencies, or implementation uncertainty.",
+    "output": "Smallest useful slice, real files/interfaces, owners where needed, checks, recovery and exclusions.",
+    "handoff": "04 and relevant specialists; 06 only for cross-team dependencies."
+  },
+  {
+    "id": "06",
+    "stage": "Deliver",
+    "trigger": "Multiple teams or external dependencies determine delivery.",
+    "output": "Provider/consumer ownership, acceptance evidence, critical path, forecast and escalation decisions.",
+    "handoff": "05 for team-level execution; 50 if ownership structure is the recurring bottleneck."
+  },
+  {
+    "id": "28",
+    "stage": "Deliver",
+    "trigger": "Authorized delegation can separate independent work with clear file/resource ownership.",
+    "output": "Self-contained task packets, exclusive ownership, integration owner and combined checks.",
+    "handoff": "24/22 after integration; serialize tasks that share mutable state."
+  },
+  {
+    "id": "25",
+    "stage": "Deliver",
+    "trigger": "A behavior change or defect merits a regression test.",
+    "output": "Deterministic failing case, minimal fix, observed red/green evidence and relevant edge cases.",
+    "handoff": "24 for review; 22 for the final evidence claim."
+  },
+  {
+    "id": "21",
+    "stage": "Investigate",
+    "trigger": "A defect, failed test, or unexpected behavior lacks an established cause.",
+    "output": "Reproduction, boundary evidence, falsifiable hypothesis, discriminating experiment.",
+    "handoff": "04/25 for the fix; use 34 first if users are currently harmed."
+  },
+  {
+    "id": "29",
+    "stage": "Investigate",
+    "trigger": "Latency, throughput, or resource consumption is a measured problem.",
+    "output": "Profile, dominant constraint, one proposed change, comparable benchmark and rollback criteria.",
+    "handoff": "30 if SQL dominates; 38 if capacity dominates; 22 for measured claims."
+  },
+  {
+    "id": "30",
+    "stage": "Investigate",
+    "trigger": "Query plans or database contention show SQL is the bottleneck.",
+    "output": "Plan evidence, focused query/index change, write/storage cost and safe deployment steps.",
+    "handoff": "19 if schema rollout is material; 29 for before/after workload checks."
+  },
+  {
+    "id": "40",
+    "stage": "Investigate",
+    "trigger": "A request crosses services or queues and its time/failure location is unclear.",
+    "output": "Trace propagation, async correlation, safe attributes, sampling limits and verification.",
+    "handoff": "21/29 to use the evidence; 41/43 when telemetry exposes sensitive data."
+  },
+  {
+    "id": "24",
+    "stage": "Review and verify",
+    "trigger": "A meaningful implementation or design needs correctness review.",
+    "output": "Prioritized findings, reproduction/acceptance evidence, blockers separated from preferences.",
+    "handoff": "04/25 for fixes; 23 for responding to contested feedback."
+  },
+  {
+    "id": "23",
+    "stage": "Review and verify",
+    "trigger": "Review feedback is unclear, questionable, or changes scope.",
+    "output": "Technically justified acceptance or pushback and a concrete alternative.",
+    "handoff": "Implement accepted changes; reverify affected behavior with 22."
+  },
+  {
+    "id": "48",
+    "stage": "Review and verify",
+    "trigger": "Counts or happy-path tests cannot establish semantic correctness.",
+    "output": "Explicit criteria, independent oracle, invariant reconciliation, candidate-bound evidence and verdict.",
+    "handoff": "19/13/18 owner resolves discrepancies; 22 communicates only supported claims."
+  },
+  {
+    "id": "22",
+    "stage": "Review and verify",
+    "trigger": "About to say done, fixed, tested, migrated, or ready.",
+    "output": "Fresh evidence appropriate to the change; explicit verified, failed, unrun and blocked claims.",
+    "handoff": "Authorized release via 45 when applicable, or a truthful completion report."
+  },
+  {
+    "id": "33",
+    "stage": "Release and operate",
+    "trigger": "A service needs a measurable reliability contract or existing metrics miss user outcomes.",
+    "output": "SLI numerator/denominator, objective/window, error budget and useful alerts.",
+    "handoff": "32 for operational policy; 45/34 for rollout and response criteria."
+  },
+  {
+    "id": "32",
+    "stage": "Release and operate",
+    "trigger": "Reliability risk, alert quality, or error-budget consumption affects a decision.",
+    "output": "User-impact assessment, release recommendation, prioritized reliability work and recovery signals.",
+    "handoff": "45 for release; 34 for incident action; 33 if the measurement contract is missing."
+  },
+  {
+    "id": "45",
+    "stage": "Release and operate",
+    "trigger": "A production change needs controlled promotion and recovery.",
+    "output": "Verified artifact, preproduction checks, compatible migration order, exposure limits and abort/recovery steps.",
+    "handoff": "32 observes outcomes; 34 responds to harm; 22 limits completion claims."
+  },
+  {
+    "id": "34",
+    "stage": "Release and operate",
+    "trigger": "A live incident needs immediate action, or a risky path needs a recovery runbook.",
+    "output": "Mitigation sequence, operator/owner, escalation, rollback branch and proof of recovery.",
+    "handoff": "21 during/after stabilization; 36 on handoff; 35 after stabilization."
+  },
+  {
+    "id": "36",
+    "stage": "Release and operate",
+    "trigger": "Responsibility changes while risk or unfinished operational work remains.",
+    "output": "Named owner, current state, next timed action, escalation threshold and acknowledgment.",
+    "handoff": "Incoming responder continues 34; keep uncertain facts explicit."
+  },
+  {
+    "id": "35",
+    "stage": "Release and operate",
+    "trigger": "An incident has stabilized and lessons need durable follow-through.",
+    "output": "Blameless causal analysis, confidence limits, prioritized owned actions with closure evidence.",
+    "handoff": "05/06 implement prevention; 33/34 update measurement and response."
+  },
+  {
+    "id": "37",
+    "stage": "Release and operate",
+    "trigger": "Data-loss, disaster recovery, or resilience requirements need demonstrated capability.",
+    "output": "Business recovery scope, RPO/RTO, trusted recovery path and timed restore/integrity evidence.",
+    "handoff": "19/45 for system changes; 34/47 for usable recovery instructions."
+  },
+  {
+    "id": "38",
+    "stage": "Improve the system",
+    "trigger": "Growth, failures, quotas, or infrastructure choices require capacity judgment.",
+    "output": "Demand model, degraded-state capacity, headroom, cost and load/failover validation.",
+    "handoff": "02 for architecture; 45 for capacity changes; 39 for efficiency work."
+  },
+  {
+    "id": "39",
+    "stage": "Improve the system",
+    "trigger": "Cloud spend needs reduction without hidden reliability loss.",
+    "output": "Prioritized savings experiments, measured bill effect, risk controls and rollback.",
+    "handoff": "38 checks capacity; 32 protects reliability; 22 distinguishes estimates from savings."
+  },
+  {
+    "id": "46",
+    "stage": "Improve the system",
+    "trigger": "An internal platform or shared developer tool needs investment or adoption decisions.",
+    "output": "Validated user bottleneck, small self-service offer, voluntary pilot and outcome/stop criteria.",
+    "handoff": "08/05 deliver the slice; 06 coordinates actual dependencies."
+  },
+  {
+    "id": "47",
+    "stage": "Improve the system",
+    "trigger": "A change creates a new operator, developer, or consumer task.",
+    "output": "Task-oriented instructions, real examples, failure handling and verification steps.",
+    "handoff": "34/36 for operations; 13 for consumer migrations; verify commands before publication."
+  },
+  {
+    "id": "50",
+    "stage": "Improve the system",
+    "trigger": "Recurring handoffs and local incentives prevent end-to-end delivery.",
+    "output": "Ownership diagnosis, bounded organizational experiment, decision rights and flow/health measures.",
+    "handoff": "06 tracks dependencies during the experiment; 10 adjusts displaced commitments."
+  }
+]

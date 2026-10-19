@@ -1,0 +1,82 @@
+[
+  {
+    "id": "25",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Produces a minimal deterministic regression test and fix.",
+    "evidence": "Exact-expiry boundary fails before <= becomes <; adjacent boundary cases avoid false positives."
+  },
+  {
+    "id": "26",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "decision": "Drop",
+    "reason": "Correct half-day plan, but extra assumed paths/stack and procedural scaffolding duplicate the broader planning skill.",
+    "evidence": "Two tasks with invented-but-labeled TypeScript/PostgreSQL paths; migration/UI evidence included.",
+    "drop_type": "Overlap and overhead"
+  },
+  {
+    "id": "27",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Drop",
+    "reason": "Passed safe bypass, but this trial demonstrates no additional discovery value beyond existing discovery/shaping coverage.",
+    "evidence": "Honors approved label change without reopening design; no edit or test falsely claimed.",
+    "drop_type": "Overlap; limited positive evidence"
+  },
+  {
+    "id": "28",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Delegates by dependency rather than counting failures.",
+    "evidence": "Auth and billing grouped around shared fixture; independent CSS parallel; combined validation."
+  },
+  {
+    "id": "29",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Targets measured bottleneck and specifies a credible comparison.",
+    "evidence": "Batches 40 sequential queries; rejects unsupported Rust/Redis solution; controls workload and variation."
+  },
+  {
+    "id": "30",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "decision": "Keep",
+    "reason": "Selects an appropriate conditional index and accounts for production cost.",
+    "evidence": "Partial tenant/created_at index for open orders; concurrency, WAL, write overhead and prepared plans."
+  }
+]

@@ -1,0 +1,6 @@
+# Preserve the original trial evidence byte-for-byte, including whitespace.
+trials/** -text -whitespace
+results/** -text -whitespace
+
+# Python's CSV writer emits standard CRLF records.
+*.csv whitespace=cr-at-eol

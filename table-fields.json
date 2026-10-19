@@ -1,0 +1,252 @@
+[
+  {
+    "id": "01",
+    "does": "Finds the customer problem behind feature requests.",
+    "helps": "Challenges premature solutions; tested by deferring an unvalidated AI dashboard."
+  },
+  {
+    "id": "02",
+    "does": "Chooses system boundaries and architectural tradeoffs.",
+    "helps": "Supports defensible opinions; retained the monolith and addressed flaky tests."
+  },
+  {
+    "id": "03",
+    "does": "Evaluates technology adoption and exit criteria.",
+    "helps": "Resists novelty bias; required regional-read evidence before replacing PostgreSQL."
+  },
+  {
+    "id": "04",
+    "does": "Applies fundamental design and distributed-system principles.",
+    "helps": "Catches expensive correctness bugs; designed safe payment retries."
+  },
+  {
+    "id": "05",
+    "does": "Sequences delivery, dependencies, validation, and recovery.",
+    "helps": "Turns architecture into executable increments; planned compatible OIDC migration."
+  },
+  {
+    "id": "06",
+    "does": "Coordinates delivery across teams and dependencies.",
+    "helps": "Exposes false-green status and missing ownership before deadlines slip."
+  },
+  {
+    "id": "07",
+    "does": "Plans and tracks work within a team.",
+    "helps": "Passed, but overlaps implementation planning and program management."
+  },
+  {
+    "id": "08",
+    "does": "Bounds a useful release within fixed capacity.",
+    "helps": "Cuts scope explicitly; reduced a workflow engine to sequential approvals."
+  },
+  {
+    "id": "09",
+    "does": "Connects engineering investment to business direction.",
+    "helps": "Makes a focused bet; distinguished enterprise pipeline from collected revenue."
+  },
+  {
+    "id": "10",
+    "does": "Prioritizes competing initiatives against capacity.",
+    "helps": "Makes opportunity cost explicit; funded maintenance and SSO before redesign."
+  },
+  {
+    "id": "11",
+    "does": "Records decisions, alternatives, consequences, and revisit triggers.",
+    "helps": "Preserves rationale; justified a PostgreSQL queue over Kafka."
+  },
+  {
+    "id": "12",
+    "does": "Reconstructs architecture from available evidence.",
+    "helps": "Challenges misleading documentation and finds the smallest useful boundary."
+  },
+  {
+    "id": "13",
+    "does": "Evolves public contracts without stranding consumers.",
+    "helps": "Protects compatibility; planned exact-money APIs and conditional deprecation."
+  },
+  {
+    "id": "14",
+    "does": "Designs tenant boundaries and isolation economics.",
+    "helps": "Prioritizes existing tenant leaks before expensive dedicated infrastructure."
+  },
+  {
+    "id": "15",
+    "does": "Explains layered, hexagonal, and domain-oriented patterns.",
+    "helps": "Passed restraint test, but broader architecture guidance covers the same judgment."
+  },
+  {
+    "id": "16",
+    "does": "Designs service boundaries and distributed operations.",
+    "helps": "Correctly rejected extraction; keep only as a specialist reference."
+  },
+  {
+    "id": "17",
+    "does": "Separates command and query models.",
+    "helps": "Correctly rejected CQRS; too specialized for the core shortlist."
+  },
+  {
+    "id": "18",
+    "does": "Coordinates partial failure across distributed transactions.",
+    "helps": "Recognizes irreversible actions; never promises to roll back nonrefundable purchases."
+  },
+  {
+    "id": "19",
+    "does": "Plans compatible schema changes and data backfills.",
+    "helps": "Avoids destructive rollouts; preserved continuous writes and mixed app versions."
+  },
+  {
+    "id": "20",
+    "does": "Handles dependency upgrades and breaking changes.",
+    "helps": "Balances urgent CVE containment with compatibility and rollback."
+  },
+  {
+    "id": "21",
+    "does": "Investigates root causes through falsifiable hypotheses.",
+    "helps": "Prevents guesswork; traced duplicate charges instead of extending timeouts."
+  },
+  {
+    "id": "22",
+    "does": "Requires fresh evidence before declaring success.",
+    "helps": "Prevents false completion claims after stale tests or failed commands."
+  },
+  {
+    "id": "23",
+    "does": "Evaluates review feedback before applying it.",
+    "helps": "Enables respectful pushback; rejected unsafe infinite payment retries."
+  },
+  {
+    "id": "24",
+    "does": "Prioritizes actionable code-review findings.",
+    "helps": "Focuses on money loss and invalid inputs before naming preferences."
+  },
+  {
+    "id": "25",
+    "does": "Builds regression tests before minimal fixes.",
+    "helps": "Proves boundary behavior with deterministic tests rather than sleeps."
+  },
+  {
+    "id": "26",
+    "does": "Creates detailed step-by-step implementation plans.",
+    "helps": "Passed, but duplicated planning guidance and added speculative paths and stack."
+  },
+  {
+    "id": "27",
+    "does": "Clarifies intent and scales design discussion.",
+    "helps": "Honored the trivial-change fast path; no distinct discovery benefit demonstrated."
+  },
+  {
+    "id": "28",
+    "does": "Divides work by independence and shared state.",
+    "helps": "Avoids conflicting agents; grouped shared-fixture failures and separated CSS."
+  },
+  {
+    "id": "29",
+    "does": "Profiles bottlenecks and designs controlled experiments.",
+    "helps": "Targets measured waste; chose query batching over a rewrite."
+  },
+  {
+    "id": "30",
+    "does": "Uses query plans and indexes to improve SQL.",
+    "helps": "Includes write cost and safe deployment, not just faster reads."
+  },
+  {
+    "id": "31",
+    "does": "Checks evidence and ownership before launch.",
+    "helps": "Dropped for overhead: minimum-readiness request became eleven evidence categories."
+  },
+  {
+    "id": "32",
+    "does": "Connects reliability targets, alerting, and release policy.",
+    "helps": "Challenges risky launches using an exhausted error budget."
+  },
+  {
+    "id": "33",
+    "does": "Defines user-centered reliability indicators and objectives.",
+    "helps": "Measures completed exports; keeps stuck jobs in the denominator."
+  },
+  {
+    "id": "34",
+    "does": "Defines incident mitigation, escalation, and recovery checks.",
+    "helps": "Acts quickly without guessing recovery; tested flag mitigation and rollback timing."
+  },
+  {
+    "id": "35",
+    "does": "Turns incidents into systemic, verifiable improvements.",
+    "helps": "Avoids blame; proposed protocol tests, staging parity, and rollback rehearsal."
+  },
+  {
+    "id": "36",
+    "does": "Transfers incident context and next actions.",
+    "helps": "Preserves ownership, restart deadlines, escalation triggers, and uncertainty."
+  },
+  {
+    "id": "37",
+    "does": "Plans and tests business-service recovery.",
+    "helps": "Rejects green-backup complacency; checks actual RPO and RTO."
+  },
+  {
+    "id": "38",
+    "does": "Models demand, failure capacity, headroom, and cost.",
+    "helps": "Caught the zone-loss deficit and calculated required pod counts."
+  },
+  {
+    "id": "39",
+    "does": "Prioritizes cloud savings with operational constraints.",
+    "helps": "Challenges arbitrary savings promises while protecting database memory and reliability."
+  },
+  {
+    "id": "40",
+    "does": "Follows requests across synchronous and asynchronous boundaries.",
+    "helps": "Connects queue traces and prevents sensitive telemetry leakage."
+  },
+  {
+    "id": "41",
+    "does": "Finds trust-boundary failures and prioritizes controls.",
+    "helps": "Fixes authorization first; tests cross-tenant access and exposed download links."
+  },
+  {
+    "id": "42",
+    "does": "Maps concrete threats to controls and verification.",
+    "helps": "Selects signatures, deduplication, and safe SQL rather than an irrelevant VPN."
+  },
+  {
+    "id": "43",
+    "does": "Minimizes data and designs retention and deletion.",
+    "helps": "Collects only useful analytics and verifies deletion across derived stores."
+  },
+  {
+    "id": "44",
+    "does": "Designs authentication, sessions, and authorization.",
+    "helps": "Makes revocation real and addresses JWT, XSS, and CSRF tradeoffs."
+  },
+  {
+    "id": "45",
+    "does": "Builds tested, progressive deployment and recovery stages.",
+    "helps": "Moves tests before exposure and separates additive from destructive migrations."
+  },
+  {
+    "id": "46",
+    "does": "Builds internal platforms around developer needs.",
+    "helps": "Targets database-access delays instead of mandating an unwanted portal."
+  },
+  {
+    "id": "47",
+    "does": "Creates task-oriented technical instructions.",
+    "helps": "Explains replay hazards and checks without inventing command syntax."
+  },
+  {
+    "id": "48",
+    "does": "Verifies claims against independent, reproducible evidence.",
+    "helps": "Catches semantic migration corruption that matching row counts misses."
+  },
+  {
+    "id": "49",
+    "does": "Audits generated code for hidden failure paths and debt.",
+    "helps": "Passed, but duplicates code-review and secure-engineering checks; no distinct core benefit shown."
+  },
+  {
+    "id": "50",
+    "does": "Aligns team ownership with outcomes and flow.",
+    "helps": "Tests shared outcome ownership; measures lead time instead of adding a coordination manager."
+  }
+]
