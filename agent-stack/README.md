@@ -1,57 +1,62 @@
-# Four specialist agents for production ML work
+# Custom agents and their skills
 
-Prepared 2026-10-19 for a staff ML engineer using Codex, Claude Code, OpenCode, Superpowers, Ponytail, Caveman, document skills, and Humanizer.
+The lead reads one [judgment guide](JUDGMENT.md) and sees short descriptions of the specialists registered in its host. Each specialist receives that same guide plus its remit, the skills assigned to it, and when to use each skill. The role descriptions and assignments live in [roles.json](roles.json). The [routing guide](ROUTING.md) explains when a specialist's answer earns the extra review.
 
-Use four named specialists alongside the lead agent. Their value is a distinct question, focused evidence, and an independent review context. Keep the main agent responsible for understanding the whole problem and integrating the result. Keep built-in exploration and implementation agents for their existing jobs.
+## Starting assignments
 
-## Picks and upstream sources
-
-| Recommended role | Upstream starting point | Decision and adaptation | When it earns its cost |
+| Specialist | Skills | Decision it helps the lead make | Upstream role reference |
 |---|---|---|---|
-| `staff-code-reviewer` | [Superpowers code reviewer template](https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/code-reviewer.md) | Reuse the review process you already have. Register a named role where useful; preserve task-specific Superpowers review prompts. | Consequential implementation is ready for independent review. Look for real behavior regressions and missing requirements, with file references. |
-| `staff-security-reviewer` | [Anthropic code-modernization security-auditor](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/code-modernization/agents/security-auditor.md) | Add. Its concrete attack-path, secret-handling, and finding requirements are a useful starting point. Narrow to the affected system and add relevant ML artifact/data boundaries. | Changes touch identity, tenancy, external input, dependencies, secrets, or sensitive data. |
-| `ml-release-reviewer` | [wshobson mlops-engineer](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/machine-learning-ops/agents/mlops-engineer.md) | Adapt substantially. The upstream agent builds infrastructure; your recurring need is independent review of existing ML releases. This role name and its evaluation contract are newly authored. | Runtime/library upgrades or changes to model, preprocessing, features, data contracts, or serving. |
-| `production-investigator` | [wshobson DevOps troubleshooter](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/incident-response/agents/devops-troubleshooter.md) | Adapt into an investigator that returns evidence and discriminating checks. Keep remediation with the lead. | Failed upgrades, production incidents, inference/training failures, latency or cost regressions. |
+| `staff-code-reviewer` | `code-review-excellence` | Whether the change preserves downstream behavior and whether the tests cover the risky path. It can fill the existing Superpowers review step. | [Superpowers reviewer](https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/code-reviewer.md) |
+| `staff-security-reviewer` | `secure-software-engineering`, `privacy-engineering` | Whether a change to identity, permissions, artifact loading or sensitive data crosses a boundary the application is meant to enforce. | [Anthropic security auditor](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/code-modernization/agents/security-auditor.md) |
+| `ml-release-reviewer` | `verification-methodology`, `dependency-upgrade` | Whether the evidence supports promotion, including the critical cohort and compatibility of the recovery path. | [MLOps engineer](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/machine-learning-ops/agents/mlops-engineer.md) |
+| `production-investigator` | `systematic-debugging`, `site-reliability-engineering` | Which explanation best fits the incident and which observation would discriminate between plausible causes. | [DevOps troubleshooter](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/incident-response/agents/devops-troubleshooter.md) |
 
-The included definitions are original, concise adaptations informed by these sources and the production-ML working agreement. They are not verbatim upstream agents, and their performance has not been established by the earlier 50 skill trials. No model is pinned: choose by observed performance and available tools, rather than assigning intelligence by host brand.
+These are four assistant-authored advisory roles. For each starting skill, the manifest's `screening_id` identifies its [pinned upstream source](../evaluation.json). A skill can belong to multiple roles where each has a concrete use for it. The user can keep a custom skill local to a project.
 
-## How the model knows they exist
+## Add an agent or change its skills
 
-There are two separate pieces: native agent registration exposes each name and description; the lead's routing instructions say when to delegate. A collection of Markdown files in a generic skills directory does not establish a callable specialist agent.
+1. Copy a role entry in [roles.json](roles.json). Choose a unique name and describe the decision it can inform. In `instructions`, state the evidence it should examine, its responsibilities, and what the lead needs back. The calibration test is whether the new role can answer a recurring question better than a role you already have.
+2. Give it a `skills` list. Each entry has an exact `id`, a short `use_when`, and either a `screening_id` for a retained skill or a `source` pointing to the custom skill. The `source` field records provenance. Install the actual skill under a supported host location. Use the optional `host_ids` mapping when installed names differ, for example a plugin-qualified Claude skill ID.
+3. From the repository root, run `python agent-stack/build.py` then `python scripts/validate.py`. Review the generated files and copy the desired roles to your project's agent directory for that host. Publish or register as many roles as you intend to use there.
+4. In a fresh session, ask the host to call one named role with a case where its skill matters. Check the invocation or preload record, its effective tool permissions, and the evidence in its answer. Try an unrelated skill to check any intended restriction. Then try the normal workflow and observe whether the lead uses the role at the point you want.
 
-These adapters follow the official documentation inspected on the date above:
+For example, a custom skill entry in a data-contract reviewer's `skills` list could read as follows. The path is illustrative.
 
-| Host | Pack files | Personal destination | Project destination | Discovery |
-|---|---|---|---|---|
-| [Codex](https://developers.openai.com/codex/subagents/) | `codex/*.toml` | `~/.codex/agents/` | `.codex/agents/` | Standalone TOML with `name`, `description`, and `developer_instructions`. Applicable project/skill instructions or an explicit request can trigger delegation. |
-| [Claude Code](https://code.claude.com/docs/en/sub-agents) | `claude/*.md` | `~/.claude/agents/` | `.claude/agents/` | YAML frontmatter defines the name, description, and allowed tools; matching descriptions guide delegation. |
-| [OpenCode](https://opencode.ai/docs/agents/) | `opencode/*.md` | `~/.config/opencode/agents/` | `.opencode/agents/` | Filename gives the name; `description` and `mode: subagent` expose the role for delegation. The lead's task permissions must permit it. |
+```json
+{
+  "id": "feature-contract-check",
+  "use_when": "Check the default and ordering of features shared by batch training and online inference.",
+  "source": "skills/feature-contract-check/SKILL.md"
+}
+```
 
-Choose one scope per role and preserve existing definitions. The user's installed versions have not been inspected; older releases may require different configuration. The Codex files target the currently documented standalone-agent format, rather than assuming an older `agents.<name>.config_file` setup.
+The generator currently produces **advisory** agents. Their assignments cover inspection and recommendations. Creating an agent that edits code, runs jobs or operates production calls for defining that authority and its tool permissions explicitly. Review the effective permissions on the target host.
 
-Merge the short [ROUTING.md](ROUTING.md) policy into the instructions the lead already reads: usually `AGENTS.md` for Codex/OpenCode and `CLAUDE.md` for Claude Code. This gives explicit, scoped delegation guidance without requiring the user to remember each agent name. It does not override host permissions or higher-priority instructions. Restart after introducing new agent directories, then check that the host recognizes the names.
+## Bind skills in the chosen host
 
-The current Superpowers reviewer source is a prompt template that dispatches a general-purpose subagent. Having that skill installed does not itself prove that a named `staff-code-reviewer` exists. This pack makes the role explicit; it does not patch Superpowers or automatically replace every review step.
+| Host and output directory | Project destination | How skills are made available |
+|---|---|---|
+| Codex, `codex/` | `.codex/agents/` | The portable TOML names the role's assigned skills in its instructions. Codex inherits the parent's available skills. For native per-skill disables, export against the installed catalog as shown below. [Codex subagents](https://developers.openai.com/codex/subagents/) |
+| Claude Code, `claude/` | `.claude/agents/` | The `skills` frontmatter preloads the assigned installed IDs. The reviewer tool list allows Read, Glob and Grep. Missing or disabled skills can be skipped, so verify the actual preload. [Claude Code subagents](https://code.claude.com/docs/en/sub-agents) |
+| OpenCode V1, `opencode/` | `.opencode/agents/` | The legacy `permission.skill` map denies skill calls by default and allows the assigned IDs. Use the format matching your installed version. |
+| OpenCode V2, `opencode-v2/` | `.opencode/agents/` | Ordered `permissions` rules allow the `skill` action for the assigned IDs. Confirm IDs from the host's catalog. [OpenCode agents](https://opencode.ai/docs/agents/) · [Skill permissions](https://opencode.ai/docs/skills/) |
 
-## Tool boundaries and handoff
+Choose one OpenCode format per installation. For any host, register the supporting skills and use their effective IDs. A role manifest does not install third-party code. Restricting skill invocation is separate from restricting access to files, shell tools or services. For example, a reviewer with a file reader can still inspect files within its permitted workspace.
 
-Claude variants allow `Read`, `Glob`, and `Grep`. OpenCode variants allow local reading/search and deny other tool actions. The lead supplies diffs, command results, scanner output, and redacted telemetry. These narrow review roles can inspect underlying code but do not independently run tests or query production.
+### Scope a Codex export to local skills
 
-Codex agents inherit the parent's permissions under the current documentation. The included instruction to avoid modifications is a behavioral restriction, not a separately enforced read-only sandbox. Apply actual access controls through the host, and retain the parent session's appropriate permissions. No files here alter global permissions, credentials, or production access. See [Codex subagent permissions](https://developers.openai.com/codex/subagents/) and [OpenCode permissions](https://opencode.ai/docs/permissions/).
+Create a local inventory JSON object mapping **every installed skill ID in scope** to the absolute path of its `SKILL.md` on that machine. Include all skills assigned to the roles in the manifest. From the repository root run the following command, replacing the example paths with your own. Choose a new or empty output directory outside `agent-stack/`.
 
-Superpowers remains the workflow owner. Ponytail's preference for the smallest complete change applies to recommendations. Caveman can shorten conversational updates without deleting evidence or material uncertainty. Use normal technical prose for findings that become review comments or reports; Humanizer belongs to final prose editing, not rewriting technical evidence.
+```bash
+python agent-stack/build.py --codex-inventory /path/to/inventory.json --output-dir /path/to/codex-export
+```
 
-## Candidates I would leave out initially
+The exported TOML disables the inventoried unassigned skills for each role. Copy the local export to the target host's agent directory. Regenerate when the installed skill catalog changes. Omitted skills can remain visible through parent inheritance, and an assigned skill still needs to be enabled in the host. Keep the machine-specific inventory and export local.
 
-- [VoltAgent security-auditor](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/04-quality-security/security-auditor.md): broad audit/compliance scope and a presumed context-manager protocol need substantial adaptation. Its sample progress numbers are examples, not measurements. Anthropic's code-focused reviewer is closer to your immediate need.
-- [VoltAgent sre-engineer](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/03-infrastructure/sre-engineer.md): includes fixed MTTR, availability, and automation targets independent of your services. Prefer a scoped investigator using your actual objectives.
-- [wshobson architect-review](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/comprehensive-review/agents/architect-review.md): retain as a possible later specialist for major boundary changes; the pattern-compliance emphasis is not a useful gate on every maintenance task.
-- [Anthropic feature-dev code-reviewer](https://github.com/anthropics/claude-code/blob/main/plugins/feature-dev/agents/code-reviewer.md): a credible alternative if you move away from Superpowers review. I would not add both for the same review; its tool list also needs checking against the installed host.
+## Verification and adoption
 
-## What is verified and what remains
+The builder checks that the generated files match the shared policy and per-host assignments. The [judgment checks](judgment-checks.md) record two fresh policy-only scenarios. For an adoption decision, replay a real historical upgrade on the same host and model with the existing workflow and then with one specialist added. Withhold the outcome until scoring. Compare consequential findings, false alarms, and time spent on review.
 
-Inspected the linked source instructions and current official host documentation. Generated four definitions for each host and parsed all TOML and YAML frontmatter. Checked matching role names and ZIP integrity. Files live in this review pack only; no agents or plugins were installed or activated.
+## Other agent references considered
 
-These checks establish valid file syntax, not that your host loads them or that they outperform default agents. A useful first pilot is a representative runtime upgrade: give the lead a fixed diff and evidence, confirm it selects `ml-release-reviewer`, and check whether the specialist finds a real compatibility/evaluation issue without inventing failures or expanding scope. Repeat for a known security defect and an incident with an established cause. Compare against the current workflow before keeping the new definitions permanently.
-
-Role descriptions are exported in [roles.json](roles.json); [build.py](build.py) contains their source and generates the adapters and archive. This is a proposed starting stack, ready for local installation and host-level evaluation.
+The [VoltAgent security auditor](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/04-quality-security/security-auditor.md) assumes a wider audit scope. The [VoltAgent SRE engineer](https://github.com/VoltAgent/awesome-claude-code-subagents/blob/main/categories/03-infrastructure/sre-engineer.md) supplies fixed operational targets where the project should supply its actual objectives. The [wshobson architecture reviewer](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/comprehensive-review/agents/architect-review.md) is a candidate for major boundary changes. The [Anthropic code reviewer](https://github.com/anthropics/claude-code/blob/main/plugins/feature-dev/agents/code-reviewer.md) offers an alternative to the Superpowers review step.

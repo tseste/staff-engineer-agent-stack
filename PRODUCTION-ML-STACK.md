@@ -1,4 +1,6 @@
-**Recommended shared stack for a staff ML engineer**
+# October 2026 production ML stack proposal
+
+The November revision makes shared judgment the starting point and lets each custom agent own its skill assignments. Use the six candidates below when a project shows a gap. Current guidance lives in the [judgment guide](agent-stack/JUDGMENT.md), [role catalog](agent-stack/README.md) and [decision record](DECISIONS.md).
 
 Primary work: maintaining and upgrading production systems, with product development, research, and documents also in scope. Hosts: Codex, Claude Code, and OpenCode.
 

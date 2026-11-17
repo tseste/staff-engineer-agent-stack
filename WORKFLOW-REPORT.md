@@ -216,7 +216,7 @@ Each skill name links to the exact source version evaluated. Trial links show th
 
 **Using and maintaining this report**
 
-Use the [original evaluation](REPORT.md) to inspect keep/drop reasoning and [all trial evidence](staff-engineer-skills-evidence.zip) to inspect scenarios and outputs. This document recommends selective use; it does not install or enable skills. The plain-language workflow and replacement combinations are new synthesis, not additional tested packages.
+Use the [original evaluation](REPORT.md) to inspect keep/drop reasoning and follow the [evidence table](REPORT.md#evaluation-evidence) to the scenarios and saved outputs. This document recommends selective use; it does not install or enable skills. The plain-language workflow and replacement combinations are new synthesis, not additional tested packages.
 
 When adopting this workflow, test a representative small task, a risky change, and an incident exercise. Record correctness issues, unnecessary questions, useful decisions, elapsed effort, and review findings. Compare with the existing workflow before claiming an improvement. Change one routing rule at a time. Re-evaluate on materially different skill versions rather than assuming the pinned results still apply.
 

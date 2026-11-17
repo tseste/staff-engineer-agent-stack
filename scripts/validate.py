@@ -4,8 +4,8 @@ from pathlib import Path
 import hashlib
 import json
 import re
-import tomllib
-import yaml
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -32,22 +32,7 @@ def main():
     assert len(routing) == 42 and {r["id"] for r in routing} == kept
     assert len(alternatives) == 8 and {r["dropped_id"] for r in alternatives} == dropped
     assert all(set(r["replacement_ids"]) <= kept for r in alternatives)
-    names = {r["name"] for r in read_json("agent-stack/roles.json")}
-    assert len(names) == 4
-    for host, suffix in [("codex", "toml"), ("claude", "md"), ("opencode", "md")]:
-        paths = list((ROOT / "agent-stack" / host).glob(f"*.{suffix}"))
-        assert {p.stem for p in paths} == names
-        for p in paths:
-            if suffix == "toml":
-                data = tomllib.loads(p.read_text())
-                assert data["name"] == p.stem and data["developer_instructions"]
-            else:
-                data = yaml.safe_load(p.read_text().split("---\n", 2)[1])
-                if host == "claude":
-                    assert data["name"] == p.stem and data["tools"] == "Read, Glob, Grep"
-                else:
-                    assert data["mode"] == "subagent" and data["permission"]["*"] == "deny"
-            assert data["description"]
+    subprocess.run([sys.executable, str(ROOT / "agent-stack" / "build.py"), "--check"], check=True)
     checked_links = 0
     for p in ROOT.rglob("*.md"):
         if any(part in {"sources", ".git"} for part in p.relative_to(ROOT).parts):
@@ -62,7 +47,7 @@ def main():
                 continue
             assert (p.parent / target).exists(), (p, target)
             checked_links += 1
-    print(f"OK: 50 scenarios/results match original hashes; 42 kept/8 dropped; routing complete; 12 agent definitions parse; {checked_links} local links resolve.")
+    print(f"OK: 50 scenarios/results match original hashes; 42 kept/8 dropped; routing complete; generated adapters match role and skill bindings; {checked_links} local links resolve.")
     print("This validates archival integrity and syntax, not skill efficacy or host compatibility.")
 
 if __name__ == "__main__":
